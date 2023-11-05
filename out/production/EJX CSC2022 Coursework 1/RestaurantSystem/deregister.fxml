@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantSystem.DeregisterController">
+   <children>
+      <TableView fx:id="table" layoutX="217.0" layoutY="14.0" onKeyPressed="#switchFocus" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columns>
+          <TableColumn fx:id="usernameColumn" prefWidth="166.0" text="Username" />
+            <TableColumn fx:id="adminColumn" minWidth="0.0" prefWidth="149.0" text="Admin Name" />
+            <TableColumn fx:id="managerColumn" minWidth="9.0" prefWidth="62.0" text="Manager" />
+            <TableColumn fx:id="signUpColumn" prefWidth="212.0" text="Signed Up On" />
+        </columns>
+      </TableView>
+      <HBox layoutX="20.0" layoutY="223.0" prefHeight="100.0" prefWidth="370.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonOnAction" onKeyPressed="#switchFocus" prefHeight="28.0" prefWidth="131.0" styleClass="select-btn" stylesheets="@style.css" text="Back">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="COLOR_DODGE" fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="removeButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deregister" onKeyPressed="#switchFocus" prefHeight="28.0" prefWidth="142.0" styleClass="select-btn" stylesheets="@style.css" text="De-Register">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="400.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0,1),10.0,0.0,0.0,10.0)
+}
+
+.chosen-food-card{
+    -fx-background-color:#ffd28f;
+    -fx-background-radius:30;
+}
+
+.addToCart-btn{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+}
+
+.qty-label{
+    -fx-background-color: #ffffff;
+}
+
+.select-btn{
+    -fx-background-color: #d9c1ff;
+    -fx-background-radius: 10;
+}
+
+.selected-btn{
+    -fx-background-color: #d9c1ff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: rgb(113, 57, 228);
+}
+
+.item{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+}
+
+.button:focused,.button:hover{
+     -fx-effect: dropshadow(gaussian, #8f1fea, 10, 0, 0, 0);
+}
+
+.startup-btn{
+    -fx-background-color:  #D9C1FF;
+    -fx-border-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.menu-button:focused{
+    -fx-effect: dropshadow(gaussian, #8f1fea, 10, 0, 0, 0);
+}
+
+.menu-button:hover{
+    -fx-opacity: 0.7;
+    -fx-background: #c081f3;
+}
+.menu-button{
+    -fx-background-color: #d9c1ff;
+    -fx-background-radius: 10;
+}
+
+.pane{
+     -fx-background-color:#05CEE6
+}

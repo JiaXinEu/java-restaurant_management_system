@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dessertAnchor" prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: #05CEE6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantSystem.DessertController">
+    <children>
+        <BorderPane layoutX="12.0" layoutY="112.0" prefHeight="810.0" prefWidth="1290.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox prefHeight="721.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox fx:id="chosenFood" alignment="TOP_CENTER" prefHeight="637.0" prefWidth="335.0" stylesheets="@style.css">
+                            <VBox.margin>
+                                <Insets left="50.0" right="50.0" top="30.0" />
+                            </VBox.margin>
+                            <children>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label fx:id="foodNameLabel" prefHeight="100.0" prefWidth="226.0" textFill="WHITE">
+                                            <font>
+                                                <Font name="Cambria" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="foodPriceLabel" prefHeight="100.0" prefWidth="146.0" textFill="WHITE">
+                                            <font>
+                                                <Font name="Cambria" size="24.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="20.0" top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <ImageView fx:id="foodImage" fitHeight="170.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                                    <VBox.margin>
+                                        <Insets top="80.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                                <HBox alignment="CENTER" prefHeight="44.0" prefWidth="335.0">
+                                    <children>
+                                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#qtyButtonOnAction" prefHeight="86.0" prefWidth="0.0" styleClass="chosen-food-card" stylesheets="@style.css">
+                                            <font>
+                                                <Font name="System Bold" size="64.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView blendMode="SRC_ATOP" fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../image/add.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                        </Button>
+                              <TextField fx:id="qtyLabel" alignment="CENTER" onKeyPressed="#switchFocus" prefHeight="25.0" prefWidth="50.0" text="0">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                              </TextField>
+                                        <Button fx:id="minusButton" mnemonicParsing="false" onAction="#qtyButtonOnAction" prefHeight="86.0" prefWidth="13.0" styleClass="chosen-food-card" stylesheets="@style.css">
+                                            <font>
+                                                <Font name="System Bold" size="64.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView blendMode="SRC_ATOP" fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../image/minus.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <Button fx:id="addToCartButton" mnemonicParsing="false" onAction="#addToCart" prefHeight="50.0" prefWidth="270.0" styleClass="addToCart-btn" stylesheets="@style.css" text="ADD TO CART">
+                                    <font>
+                                        <Font name="Arial Black" size="24.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" top="60.0" />
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="chosen-food-card" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </VBox>
+                    </children>
+                </VBox>
+            </left>
+            <top>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #05CEE6;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="appetizerButton" mnemonicParsing="false" onAction="#switchMenu" prefHeight="60.0" prefWidth="250.0" styleClass="select-btn" stylesheets="@style.css" text="APPETIZER">
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="mainButton" mnemonicParsing="false" onAction="#switchMenu" prefHeight="60.0" prefWidth="250.0" styleClass="select-btn" stylesheets="@style.css" text="MAIN">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="60.0" prefWidth="250.0" styleClass="selected-btn" stylesheets="@style.css" text="DESSERT">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="checkoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#switchMenu" prefHeight="60.0" prefWidth="250.0" styleClass="select-btn" stylesheets="@style.css">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="174.0" text="total: RM">
+                                                    <font>
+                                                        <Font name="Cambria Bold" size="24.0" />
+                                                    </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="totalLabel" prefHeight="30.0" prefWidth="142.0" text="0.00">
+                                                    <font>
+                                                        <Font name="Cambria Bold" size="24.0" />
+                                                    </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <Label text="Checkout">
+                                            <font>
+                                                <Font name="Cambria Bold" size="24.0" />
+                                            </font>
+                                        </Label>
+                              <Label fx:id="checkoutErrorLabel" alignment="CENTER" textFill="RED" />
+                                    </children>
+                                </VBox>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="46.0" prefWidth="123.0" style="-fx-background-color: rgb(228, 59, 225);" stylesheets="@style.css" text="Logout">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Cambria Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </HBox>
+            </top>
+            <center>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ScrollPane fx:id="scroll" onKeyPressed="#switchFocus" prefHeight="700.0" prefWidth="846.0" styleClass="transparent" stylesheets="@style.css">
+                            <content>
+                                <GridPane fx:id="grid" alignment="TOP_CENTER" prefHeight="0.0" prefWidth="0.0">
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                    </rowConstraints>
+                                    <padding>
+                                        <Insets left="20.0" right="20.0" />
+                                    </padding>
+                                </GridPane>
+                            </content>
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </ScrollPane>
+                    </children>
+                </HBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
