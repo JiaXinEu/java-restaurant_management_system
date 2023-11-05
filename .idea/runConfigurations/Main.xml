@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="RestaurantSystem.Main" />
+    <module name="restaurant_management_system" />
+    <option name="VM_PARAMETERS" value="--module-path &quot;D:\javafx-sdk-17.0.2\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

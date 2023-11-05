@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantSystem.ConnectbankController">
+   <children>
+      <VBox alignment="CENTER" layoutX="165.0" layoutY="44.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Insert card/ Scan Code">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="enterButton" mnemonicParsing="false" onAction="#enterButtonOnAction" styleClass="select-btn" stylesheets="@style.css" text="Enter">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="connectingLabel" text="Connecting to Web Service" visible="false">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+            </Label>
+            <HBox fx:id="loadingHbox" alignment="CENTER" prefHeight="65.0" prefWidth="370.0" visible="false">
+               <children>
+                  <Circle fx:id="circle1" fill="#fa55de00" radius="10.0" stroke="#fc55e0" strokeType="INSIDE" strokeWidth="6.0">
+                     <HBox.margin>
+                        <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
+                     </HBox.margin></Circle>
+                   <Circle fx:id="circle2" fill="#fa55de00" radius="10.0" stroke="#db35e4" strokeType="INSIDE" strokeWidth="6.0">
+                     <HBox.margin>
+                        <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
+                     </HBox.margin></Circle>
+                   <Circle fx:id="circle3" fill="#fa55de00" radius="10.0" stroke="#8018d0" strokeType="INSIDE" strokeWidth="6.0" />
+                   <Circle fx:id="circle4" fill="#fa55de00" radius="10.0" stroke="#679bda" strokeType="INSIDE" strokeWidth="6.0">
+                     <HBox.margin>
+                        <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
+                     </HBox.margin></Circle>
+
+               </children>
+            </HBox>
+            <Button fx:id="doneButton" mnemonicParsing="false" onAction="#doneOnAction" styleClass="select-btn" stylesheets="@style.css" text="Done" visible="false">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

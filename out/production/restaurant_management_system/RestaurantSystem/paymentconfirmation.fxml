@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantSystem.PaymentConfirmationController">
+    <children>
+        <Label layoutX="105.0" layoutY="44.0" text="WARNING!" textFill="RED">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="41.0" layoutY="92.0" text="Payment made cannot be refunded&#10;Confirm?" textAlignment="CENTER">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </Label>
+        <Button layoutX="70.0" layoutY="144.0" mnemonicParsing="false" onAction="#confirm" styleClass="select-btn" stylesheets="@style.css" text="Confirm" textFill="WHITE">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="160.0" layoutY="144.0" mnemonicParsing="false" onAction="#confirm" prefWidth="71.0" styleClass="select-btn" stylesheets="@style.css" text="Cancel" textFill="WHITE">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
